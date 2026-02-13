@@ -812,8 +812,8 @@ function renderIntake(){
           </select>
         </div>
       </div>
-      <div class="field"><label>Clinician Email</label><input type="email" name="email" required placeholder="name@alkalmahealth.com">
-        <small>Report will be sent to this @alkalmahealth.com address</small>
+      <div class="field"><label>Clinician Email</label><input type="email" name="email" required placeholder="name@example.com">
+        <small>Report summary will be sent to this email address</small>
       </div>
       <button type="submit" class="btn btn-primary btn-block" style="margin-top:8px">Begin Assessment</button>
     </form>
@@ -826,8 +826,8 @@ function startForm(e){
   e.preventDefault();
   const f=new FormData(e.target);
   const email=f.get('email').trim();
-  if(!email.endsWith('@alkalmahealth.com')){
-    alert('Please enter a valid @alkalmahealth.com email address.');return;
+  if(!email){
+    alert('Please enter a valid email address.');return;
   }
   // Check if session already exists for this child+dob
   const childName=f.get('child').trim();
