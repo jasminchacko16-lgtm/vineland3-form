@@ -1039,8 +1039,7 @@ function renderIntake(){
     }).join('');
     var rT=lang==='ar'?AR.resumeTitle:'Continue a Saved Assessment';
     var orNew=lang==='ar'?AR.orStartNew:'or start new';
-    var uploadLbl=lang==='ar'?'رفع ملف محفوظ':'Upload Saved File';
-    return '<div class="card" style="margin-bottom:20px"><h3 style="margin-bottom:12px">'+rT+'</h3><div class="saved-list">'+items+'</div><div class="file-actions"><label class="btn btn-outline btn-sm">'+uploadLbl+'<input type="file" accept=".json" style="display:none" onchange="importSession(this.files[0])"></label></div></div><div class="or-divider">'+orNew+'</div>';
+    return '<div class="card" style="margin-bottom:20px"><h3 style="margin-bottom:12px">'+rT+'</h3><div class="saved-list">'+items+'</div></div><div class="or-divider">'+orNew+'</div>';
   })()}
   <div class="card">
     <h3 style="margin-bottom:16px">${lang==='ar'?AR.newAssessment:'New Assessment'}</h3>
