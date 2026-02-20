@@ -1104,13 +1104,13 @@ function renderSection(){
     const isBin=sec.b.includes(idx);
     const rawQ=(arSec&&arSec.q[idx])?arSec.q[idx]:qt;
     const qtext=rawQ.replace(/\[child\]/g,name).replace(/\[الطفل\]/g,name);
-    const mid=!isBin?('<label class="q-opt"><input type="radio" name="q_'+idx+'" value="1"'+(val===1?' checked':'')+' onchange="ans(''+key+'','+idx+',1)"><span>'+curL[1]+'</span></label>'):'';
+    const mid=!isBin?('<label class="q-opt"><input type="radio" name="q_'+idx+'" value="1"'+(val===1?' checked':'')+' onchange="ans(\''+key+'\','+idx+',1)"><span>'+curL[1]+'</span></label>'):'';
     return '<div class="q-card'+(val!==undefined?' answered':'')+(isAdaptive?'':' q-card-mal')+'" id="q'+idx+'">'
       +'<div class="q-top"><div class="q-num">'+(idx+1)+'</div><div class="q-text">'+qtext+'</div></div>'
       +'<div class="q-opts">'
-      +'<label class="q-opt"><input type="radio" name="q_'+idx+'" value="2"'+(val===2?' checked':'')+' onchange="ans(''+key+'','+idx+',2)"><span>'+(isBin?binL[0]:curL[0])+'</span></label>'
+      +'<label class="q-opt"><input type="radio" name="q_'+idx+'" value="2"'+(val===2?' checked':'')+' onchange="ans(\''+key+'\','+idx+',2)"><span>'+(isBin?binL[0]:curL[0])+'</span></label>'
       +mid
-      +'<label class="q-opt"><input type="radio" name="q_'+idx+'" value="0"'+(val===0?' checked':'')+' onchange="ans(''+key+'','+idx+',0)"><span>'+(isBin?binL[1]:curL[2])+'</span></label>'
+      +'<label class="q-opt"><input type="radio" name="q_'+idx+'" value="0"'+(val===0?' checked':'')+' onchange="ans(\''+key+'\','+idx+',0)"><span>'+(isBin?binL[1]:curL[2])+'</span></label>'
       +'</div></div>';
   }).join('');
 
